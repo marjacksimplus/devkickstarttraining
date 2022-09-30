@@ -11,38 +11,30 @@
 
 //Get Accounts to be updated
 public with sharing class DKS_Excercise3 {
-    public static void DKS_GetAccount () {   
+    // Returns an empty string if the info is null
+    public String returnEmptyIfNull(String info){
+        if(info == null) {
+            return '';
+        }
+        return info;
+    }
+    public static void dksGetAccount () {   
         List <Account> accountsToPass = new  List <Account>();
-        String CollectedInfo = '';
+        String collectedInfo = '';
 
-        List <Account> AllAccounts = [SELECT Id, Name FROM Account LIMIT 100];
-        for (Account eachAccount :AllAccounts) {
+        List <Account> allAccounts = [SELECT Id, Name FROM Account WHERE Id=:ID WITH SECURITY_ENFORCED LIMIT 100];
+        for (Account eachAccount :allAccounts) {
             
-            If (eachAccount.Name != null) {
-                CollectedInfo =+ eachAccount.Name;
-            }
-            If (eachAccount.AccountNumber != null) {
-                CollectedInfo =+ eachAccount.AccountNumber;
-            }
-            If (eachAccount.Site != null) {
-                CollectedInfo =+ eachAccount.AccountNumber;
-            }
-            If (eachAccount.AccountSource != null) {
-                CollectedInfo =+ eachAccount.AccountSource;
-            }
-            If (eachAccount.CleanStatus != null) {
-                CollectedInfo =+ eachAccount.CleanStatus;
-            }
-            If (eachAccount.DunsNumber != null) {
-                CollectedInfo =+ eachAccount.DunsNumber;
-            }
-            If (eachAccount.Jigsaw != null) {
-                CollectedInfo =+ eachAccount.Jigsaw;
-            }
+                
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.Name);
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.AccountNumber);
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.AccountNumber);
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.AccountSource);
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.CleanStatus);
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.DunsNumber);
+                CollectedInfo =+ returnEmptyIfNull(eachAccount.Jigsaw);
 
-            if (CollectedInfo != null ) {
                 eachAccount.DKS_Field1__c = CollectedInfo;
-            }
             
         }
 

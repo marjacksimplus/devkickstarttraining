@@ -13,15 +13,13 @@
 public with sharing class DKS_Excercise2 {
     public static void dksGetAccount (List<Account> accountsToUpdate, String additionalInfo) {    
 
-        for (Account eachAccount :accountsToUpdate) {
-            eachAccount.DKS_Field1__c = Date.today() + AdditionalInfo;
-        }
         if (!accountsToUpdate.isEmpty()) {
+            for (Account eachAccount :accountsToUpdate) {
+                eachAccount.DKS_Field1__c = Date.today() + AdditionalInfo;
+            }
             update accountsToUpdate;
         }
         // else {
-
         // } 
-        
     }
 }
