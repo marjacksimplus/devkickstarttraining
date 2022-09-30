@@ -10,8 +10,8 @@
 *****************************************/
 
 public with sharing class DKS_Excercise1 {
-    public static void ParticipantMarvin () {    
-        String NotACodingStandardString;
+    public static void participantMiles() {    
+        String notACodingStandardString;
 
     }
 }
