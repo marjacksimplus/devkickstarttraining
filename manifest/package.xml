@@ -10,6 +10,10 @@
 		<name>ApexPage</name>
 	</types>
 	<types>
+		<members>Account.DKS_Field1__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
 		<members>myLightningWebComponentMarvin</members>
 		<name>LightningComponentBundle</name>
 	</types>
