@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>MyClassMarvin</members>
-		<members>MyClassMarvz</members>
-		<name>ApexClass</name>
+		<members>DKSFolder/oCwLjthvfGppbnQjvKjHCpPDXJyQUr</members>
+		<name>Dashboard</name>
 	</types>
 	<types>
-		<members>mypageMarvin</members>
-		<name>ApexPage</name>
-	</types>
-	<types>
-		<members>Account.DKS_Field1__c</members>
-		<name>CustomField</name>
-	</types>
-	<types>
-		<members>myLightningWebComponentMarvin</members>
-		<name>LightningComponentBundle</name>
-	</types>
-	<types>
-		<members>Admin</members>
-		<name>Profile</name>
+		<members>unfiled$public/DKS_Report_1_0ZI</members>
+		<members>unfiled$public/DKS_Report_2_Cpu</members>
+		<name>Report</name>
 	</types>
 	<version>55.0</version>
 </Package>
