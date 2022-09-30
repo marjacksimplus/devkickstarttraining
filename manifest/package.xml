@@ -10,8 +10,21 @@
 		<name>ApexPage</name>
 	</types>
 	<types>
+		<members>Account.DKS_Field1__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>DKSFolder/oCwLjthvfGppbnQjvKjHCpPDXJyQUr</members>
+		<name>Dashboard</name>
+	</types>
+	<types>
 		<members>myLightningWebComponentMarvin</members>
 		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>unfiled$public/DKS_Report_1_0ZI</members>
+		<members>unfiled$public/DKS_Report_2_Cpu</members>
+		<name>Report</name>
 	</types>
 	<version>55.0</version>
 </Package>

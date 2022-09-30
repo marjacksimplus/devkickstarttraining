@@ -11,18 +11,15 @@
 
 //Update related accounts coming from other class
 public with sharing class DKS_Excercise2 {
-    public static void DKS_GetAccount (List<Account> accountsToUpdate, String AdditionalInfo) {    
+    public static void dksGetAccount (List<Account> accountsToUpdate, String additionalInfo) {    
 
-        for (Account eachAccount :accountsToUpdate) {
-            eachAccount.DKS_Field1 = Date.today() + AdditionalInfo;
-
-            if (!accountsToUpdate.isEmpty()) {
-                update accountsToUpdate;
+        if (!accountsToUpdate.isEmpty()) {
+            for (Account eachAccount :accountsToUpdate) {
+                eachAccount.DKS_Field1__c = Date.today() + AdditionalInfo;
             }
-            else {
-
-            }     
+            update accountsToUpdate;
         }
-        
+        // else {
+        // } 
     }
 }
