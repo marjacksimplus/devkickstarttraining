@@ -1,5 +1,5 @@
-public with sharing class MyClassMarvz {
-    public MyClassMarvz() {
+public with sharing class MyClassMon {
+    public MyClassMon() {
         String notASalesforceCodingStandard;
         String notASalesforceCodingStandard3;
         String notASalesforceCodingStandard4;
