@@ -12,7 +12,7 @@
 //Get Accounts to be updated
 public with sharing class DKS_Excercise3 {
     // Returns an empty string if the info is null
-    public String returnEmptyIfNull(String info){
+    public static String returnEmptyIfNull(String info){
         if(info == null) {
             return '';
         }
@@ -22,7 +22,7 @@ public with sharing class DKS_Excercise3 {
         List <Account> accountsToPass = new  List <Account>();
         String collectedInfo = '';
 
-        List <Account> allAccounts = [SELECT Id, Name FROM Account WHERE Id=:ID WITH SECURITY_ENFORCED LIMIT 100];
+        List <Account> allAccounts = [SELECT Id, Name FROM Account WITH SECURITY_ENFORCED LIMIT 100];
         for (Account eachAccount :allAccounts) {
             
                 
