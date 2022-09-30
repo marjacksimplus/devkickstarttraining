@@ -10,8 +10,18 @@
 		<name>ApexPage</name>
 	</types>
 	<types>
+		<members>DKSFolder/oCwLjthvfGppbnQjvKjHCpPDXJyQUr</members>
+		<name>Dashboard</name>
+	</types>
+	<types>
 		<members>myLightningWebComponentMarvin</members>
 		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>unfiled$public/DKS_Report_1_0ZI</members>
+		<members>unfiled$public/DKS_Report_2_Cpu</members>
+		<members>unfiled$public/flow_screen_prebuilt_report</members>
+		<name>Report</name>
 	</types>
 	<version>55.0</version>
 </Package>
