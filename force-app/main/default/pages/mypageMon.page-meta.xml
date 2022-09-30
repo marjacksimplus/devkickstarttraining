@@ -3,7 +3,7 @@
     <apiVersion>55.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <label>mylabelMarvin</label>
+    <label>mylabelMon</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
         <minorNumber>0</minorNumber>
