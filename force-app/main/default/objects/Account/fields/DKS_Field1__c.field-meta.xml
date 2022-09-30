@@ -3,9 +3,7 @@
     <fullName>DKS_Field1__c</fullName>
     <externalId>false</externalId>
     <label>DKS Field1</label>
-    <length>255</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>TextArea</type>
 </CustomField>
