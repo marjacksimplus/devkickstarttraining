@@ -13,4 +13,8 @@ public with sharing class DKS_Excercise1 {
     public static void participantMon () {    
         String notACodingStandardString;
     }
+
+    public static void participantBryan () {
+        String notACodingStandardString;
+    }
 }
