@@ -25,7 +25,6 @@ public with sharing class DKS_Excercise3 {
         List <Account> allAccounts = [SELECT Id, Name FROM Account WITH SECURITY_ENFORCED LIMIT 100];
         for (Account eachAccount :allAccounts) {
             
-                
                 CollectedInfo =+ returnEmptyIfNull(eachAccount.Name);
                 CollectedInfo =+ returnEmptyIfNull(eachAccount.AccountNumber);
                 CollectedInfo =+ returnEmptyIfNull(eachAccount.AccountNumber);
@@ -35,11 +34,7 @@ public with sharing class DKS_Excercise3 {
                 CollectedInfo =+ returnEmptyIfNull(eachAccount.Jigsaw);
 
                 eachAccount.DKS_Field1__c = CollectedInfo;
-            
         }
-
         //Call DKS_Excercise3.DKS_UpdateAccounts and pass the Account List
-        
     }
-
 }
