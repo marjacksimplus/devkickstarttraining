@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Hello World!">
+        <div class="slds-m-around_medium">
+            <p>Hello L World C</p>
+            <p>Record ID: {recordId}</p>
+            <p>PropName: {propName}</p>
+        </div>
+    </lightning-card>
+
+    <div class="slds-m-top_medium">
+        <lightning-card title="Data Binding">
+            <div class="slds-m-around_medium">
+                <p>{getTitle}</p>
+                <lightning-input name="firstName" label="First Name" onchange={onChangeHandler}></lightning-input>
+                <lightning-input name="lastName" label="Last Name" onchange={onChangeHandler}></lightning-input>
+            </div>
+            <div class="slds-m-around_medium">
+                <div>First name: {firstName}</div>
+                <div>First name: {lastName}</div>
+            </div>
+        </lightning-card>
+    </div>
+</template>

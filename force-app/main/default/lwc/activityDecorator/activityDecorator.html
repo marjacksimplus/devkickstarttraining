@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Hello World!">
+        <div class="slds-m-around_medium">
+            <p>Hello L World C</p>
+            <p>Record ID: {recordId}</p>
+            <p>PropName: {propName}</p>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-input name="firstName" label="First Name" onchange={onChangeHandler}></lightning-input>
+            <lightning-input name="lastName" label="Last Name" onchange={onChangeHandler}></lightning-input>
+            <div class="slds-m-top_medium">
+                <lightning-button label="Add name in List" variant="brand" onclick={handleOnclick}></lightning-button>
+            </div>
+        </div>
+
+        <!-- concatinated-name={mixName} -->
+        <c-activity-child-decorator first-name={firstName} last-name={lastName} concatenated-name={concatinatedName}></c-activity-child-decorator>
+    </lightning-card>
+
+    <lightning-card title="Account Name List">
+        <div class="slds-m-around_medium">
+            <lightning-formatted-rich-text value={concatenatedValue}></lightning-formatted-rich-text>
+        </div>
+        <template for:each={records} for:item="record">
+            <div key={record}>
+                <p>{record}</p>
+            </div>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Account List from Wire">
+        <div class="slds-m-around_medium">
+            <template for:each={recordList.data} for:item="acc">
+                <p key={acc.Id}>{acc.Name}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
