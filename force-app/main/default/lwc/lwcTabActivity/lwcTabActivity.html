@@ -1,5 +1,5 @@
 <template>
-    <div class="slds-p-arount--medium">
+    <div class="slds-p-around--medium">
         <h3 class="slds-text-heading--medium">LWC Tab</h3>
         <lightning-tabset variant="vertical">
             <lightning-tab label="Hello World Tab">
@@ -10,6 +10,21 @@
             <lightning-tab label="Decorator">
                 <div class="tabContent">
                     <c-activity-decorator></c-activity-decorator>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Conditional">
+                <div class="tabContent">
+                    <c-simple-conditional-rendering></c-simple-conditional-rendering>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Looping">
+                <div class="tabContent">
+                    <c-sample-looping-iterator></c-sample-looping-iterator>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Cascading">
+                <div class="tabContent">
+                    <c-sample-cascading></c-sample-cascading>
                 </div>
             </lightning-tab>
         </lightning-tabset>

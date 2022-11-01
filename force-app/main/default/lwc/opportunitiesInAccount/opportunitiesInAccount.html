@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Opportunity List">
+        <div class="slds-m-around_medium">
+            <h1>Account Id: {recordId}</h1>
+        </div>
+        <div class="slds-m-around_medium">
+            <template if:true={data.data}>
+                <lightning-datatable
+                    key-field="id"
+                    data={data.data}
+                    columns={columns}>
+                </lightning-datatable>
+            </template>  
+            <template if:false={data}>
+                No existing Opportunity to display
+            </template>  
+        </div>
+    </lightning-card>
+</template>

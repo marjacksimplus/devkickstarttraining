@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Looping Iteration" icon-name="utility:change_record_type">
+      <div class="slds-m-around_medium">
+        For each Sample <br />
+        <template for:each={listAccounts} for:item="acc">
+          <p key={acc.Id}>
+            <lightning-badge label={acc.Name}></lightning-badge>
+          </p>
+        </template>
+      </div>
+
+      <br />
+      <div class="slds-m-around_medium">
+        Iteration Sample <br />
+        <template iterator:acc={listAccounts}>
+          <div key={acc.value.Id}>
+            <div if:true={acc.first} style="border-top: 1px solid red;"></div>
+            <lightning-badge label={acc.value.Name} class={acc.value.sldsClass}></lightning-badge>
+            <div if:true={acc.last} style="border-top: 1px solid blue;"></div>
+          </div>
+        </template>
+      </div>
+    </lightning-card>
+</template>
