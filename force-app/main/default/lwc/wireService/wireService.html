@@ -1,0 +1,17 @@
+<template>
+    <template if:true={account.data}>
+      <div class="slds-m-around_medium">
+        <p>{name}</p>
+        <p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+        <p><lightning-formatted-number 
+          value={revenue}
+          format-style="currency"
+          currency-code="USD"
+          currency-display-as="symbol"
+          ></lightning-formatted-number></p>
+      </div>
+    </template>
+    <template if:false={account.data}>
+      <p>No Data</p>
+    </template>
+</template>

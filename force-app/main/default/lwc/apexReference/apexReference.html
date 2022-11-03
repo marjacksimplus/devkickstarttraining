@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Apex Reference - Get Contact Records">
+      <div class="slds-p-around_small">
+        <lightning-button
+          label="Get Contacts"
+          onclick={retrieveContactRecords}></lightning-button>
+          <br />
+          <template if:true={contacts}>
+            <template for:each={contacts} for:item="contact">
+              <p key={contact.Id}>{contact.Name}</p>
+            </template>
+          </template>
+      </div>
+    </lightning-card>
+    <lightning-card title="Apex Reference - Get Contact Records Wired">
+      <div class="slds-p-around_small">
+        <p>Retrieved Contacts Via Wire</p>
+        <br />
+        <template if:true={wiredContacts}>
+          <template for:each={wiredContacts} for:item="contact">
+            <p key={contact.Id}>{contact.Name}</p>
+          </template>
+        </template>
+      </div>
+    </lightning-card>
+</template>

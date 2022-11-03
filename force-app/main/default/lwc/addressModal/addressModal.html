@@ -1,0 +1,61 @@
+<template>
+  <!-- lightning button for open modal window -->
+  <lightning-button variant="brand"
+    label="Address Modal/PopUp in LWC"
+    title="Address Modal/PopUp in LWC"
+    onclick={openModal}
+    class="slds-m-bottom_medium">
+  </lightning-button>
+
+  <template if:true={isModalOpen}>
+    <!-- Modal/Popup Box LWC starts here -->
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- Modal/Popup Box LWC header here -->
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                    <lightning-icon icon-name="utility:close"
+                        alternative-text="close"
+                        variant="inverse"
+                        size="small" ></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal/PopUp Box header LWC</h2>
+            </header>
+            <!-- Modal/Popup Box LWC body starts here -->
+            <div class="slds-modal__content slds-var-p-around_medium" id="modal-content-id-1">
+              <lightning-combobox
+                required
+                name="addressType"
+                label="Address Type"
+                value={address.addressType}
+                placeholder="Select Address Type"
+                options={addressOptions}
+                onchange={onChangeHandler}></lightning-combobox>
+              <lightning-input name="street" label="Street" onchange={onChangeHandler} value={address.street} required></lightning-input>
+              <lightning-input name="city" label="City" onchange={onChangeHandler} value={address.city} required></lightning-input>
+              <lightning-input name="country" label="Country" onchange={onChangeHandler} value={address.country} required></lightning-input>
+            </div>
+            <!-- Modal/Popup Box LWC footer starts here -->
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={saveAddressHandler} title="Save">Save</button>
+            </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <lightning-card title="Address List">
+      <ul class="slds-m-around_medium">
+          <template for:each={addressList} for:item="addr">
+              <li key={addr.index}>
+                  <p class={addr.addressTypeClass}>Address: {addr.loc}</p>
+              </li>
+          </template>
+      </ul>
+      <!-- <div class="slds-m-around_medium">
+          <lightning-button label="Save Address" variant="brand" onclick={saveAddressHandler}></lightning-button>
+      </div> -->
+  </lightning-card>
+</template>

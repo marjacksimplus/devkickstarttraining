@@ -1,0 +1,10 @@
+<template>
+  <div style="border: solid" class="slds-p-around_x-small">
+    <p>Parent Component</p>
+    <p>Declarative Search Value: {searchValueDec}</p>
+    <p>Programmatice Search Value: {searchValueProg}</p>
+    <br />
+    <c-event-listener-child 
+      ongetsearchvaluedec={handleSearchValueDec}></c-event-listener-child>
+  </div>
+</template>

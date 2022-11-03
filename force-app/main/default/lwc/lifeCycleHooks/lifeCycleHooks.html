@@ -1,0 +1,8 @@
+<template>
+    <p>Hello, this element is now displayed in the UI</p>
+    <p>{itemName}</p>
+    <lightning-button label="hide child" onclick={handleClick}></lightning-button>
+    <template if:true={showChild}>
+      <c-lifecycle-hooks-child></c-lifecycle-hooks-child>
+    </template>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-record-edit-form
+      object-api-name={objectApiName}
+      record-id={recordId}
+      onsuccess={handleSuccess}
+      onsubmit={handleSubmit}
+    >
+      <lightning-input-field field-name={nameField}></lightning-input-field>
+      <lightning-input-field field-name={accountRevenueField}></lightning-input-field>
+      <lightning-input-field field-name={phoneField}></lightning-input-field>
+
+      <div class="slds-var-m-top_medium">
+        <lightning-button 
+          variant="brand"
+          type="submit"
+          label="Create new"></lightning-button>
+      </div>
+  </lightning-record-edit-form>
+</template>

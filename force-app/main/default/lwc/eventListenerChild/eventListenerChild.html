@@ -1,0 +1,15 @@
+<template>
+    <div style="border: solid" class="slds-p-around_x-small">
+      <p>Child Component</p>
+      <p>Declarative Example</p>
+      <lightning-input 
+        label="Enter a search value declarative event"
+        onchange={handleChangeDeclarative}></lightning-input>
+        <br />
+      <p>Programmatic Example</p>
+      <lightning-input 
+        label="Enter a search value programmatic event"
+        onchange={handleChangeProgrammative}></lightning-input>
+        <br />
+    </div>
+</template>
